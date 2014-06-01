@@ -8,8 +8,8 @@
   diff = auto
 
 [color "status"]
-  untracked = cyan
-  changed = green
+  untracked = white
+  changed = cyan
   added = yellow
 
 # Aliases are command shortcuts

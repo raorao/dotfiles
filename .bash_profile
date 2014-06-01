@@ -36,8 +36,8 @@ test -s $git_completion_script && source $git_completion_script
 c_reset='\[\e[0m\]'
 #  \e[0;31m\ sets the color to red
 c_path='\[\e[0;31m\]'
-# \e[0;32m\ sets the color to green
-c_git_clean='\[\e[0;32m\]'
+# \e[0;32m\ sets the color to purple
+c_git_clean='\[\e[0;35m\]'
 # \e[0;31m\ sets the color to red
 c_git_dirty='\[\e[0;31m\]'
 
@@ -65,7 +65,7 @@ git_prompt ()
 
 # Colors ls should use for folders, files, symlinks etc, see `man ls` and
 # search for LSCOLORS
-export LSCOLORS=ExGxFxdxCxDxDxaccxaeex
+export LSCOLORS=HxGxFxdxCxFxFxaccxaeex
 # Force ls to use colors (G) and use humanized file sizes (h)
 alias ls='ls -Gh'
 
