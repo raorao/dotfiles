@@ -69,3 +69,6 @@
   soft = reset --soft
   scrap = checkout HEAD
 
+  # custom
+  restart = !git checkout HEAD && git clean -f
+  switch = !git remote remove origin && git remote add origin
