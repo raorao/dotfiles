@@ -1,9 +1,3 @@
-# echo is like puts for bash (bash is the program running in your terminal)
-echo "Loading ~/.bash_profile a shell script that runs in every new terminal you open"
-
-# $VARIABLE will render before the rest of the command is executed
-echo "Logged in as $USER at $(hostname)"
-
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # Path for RVM
