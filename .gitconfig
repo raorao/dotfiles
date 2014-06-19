@@ -72,3 +72,6 @@
   # custom
   restart = !git checkout HEAD && git clean -f
   switch = !git remote remove origin && git remote add origin
+
+  [credential]
+    helper = osxkeychain
