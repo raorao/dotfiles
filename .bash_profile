@@ -69,9 +69,5 @@ export LSCOLORS=HxGxFxdxCxFxFxaccxaeex
 # Force ls to use colors (G) and use humanized file sizes (h)
 alias ls='ls -Gh'
 
-# Set sublime as the default editor
-which -s subl && export EDITOR="subl --wait"
-
 # Useful aliases
-
 alias e=subl
