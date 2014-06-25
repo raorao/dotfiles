@@ -64,3 +64,4 @@ alias ls='ls -Gh'
 # Useful aliases
 alias e=subl
 
+alias be="bundle exec"
