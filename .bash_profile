@@ -63,5 +63,5 @@ alias ls='ls -Gh'
 
 # Useful aliases
 alias e=subl
-
 alias be="bundle exec"
+alias te="open -a TextEdit"
