@@ -3,10 +3,7 @@ dotfiles
 
 ## Setup
 
-+ Add the following lines to ./.gitconfig
-[user]
-  name = USERNAME
-  email = EMAIL
++  update ./.gitconfig-user with your username and email.
 
 ## Usage
 
