@@ -14,6 +14,7 @@ cp .gitignore_global    $HOME/.gitignore_global
 cp .irbrc               $HOME/.irbrc
 cp .rspec               $HOME/.rspec
 cp .inputrc             $HOME/.inputrc
+cp .vimrc               $HOME/.vimrc
 cp .git-completion.bash $HOME/.git-completion.bash
 
 test -d /Applications/Sublime\ Text\ 2.app/ && {
