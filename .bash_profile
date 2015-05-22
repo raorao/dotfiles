@@ -55,6 +55,11 @@ git_prompt ()
   echo " [$git_color$git_branch${c_reset}]"
 }
 
+# loads git completion script.
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 # Colors ls should use for folders, files, symlinks etc, see `man ls` and
 # search for LSCOLORS
 export LSCOLORS=HxGxFxdxCxFxFxaccxaeex
