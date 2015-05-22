@@ -7,6 +7,9 @@
   status = auto
   diff = auto
 
+[push]
+  default = simple
+
 [color "status"]
   untracked = white
   changed = cyan
