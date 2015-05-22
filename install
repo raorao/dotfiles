@@ -31,6 +31,8 @@ test -d /Applications/Sublime\ Text.app && {
   echo "Sublime Text 3 prefs auto install not currently supported."
 }
 
+git update-index --assume-unchanged ./.gitconfig-user
+
 curl --silent http://levien.com/type/myfonts/Inconsolata.otf -o $HOME/Library/Fonts/Inconsolata.otf
 
 ./sublimelink
