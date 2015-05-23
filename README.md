@@ -5,6 +5,8 @@ dotfiles
 
 +  update ./.gitconfig-user with your username and email.
 
++ install seil to handle keyboard mapping (https://pqrs.org/osx/karabiner/seil.html)
+
 ## Usage
 
 + Either copy paste install these or run ./install to copy over your local settings
