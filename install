@@ -34,3 +34,5 @@ test -d /Applications/Sublime\ Text\ 2.app/ && {
 git update-index --skip-worktree ./.gitconfig-user
 
 ./sublimelink
+
+echo 'preferences updated.'
