@@ -20,6 +20,7 @@ cp .irbrc               $HOME/.irbrc
 cp .rspec               $HOME/.rspec
 cp .inputrc             $HOME/.inputrc
 cp .vimrc               $HOME/.vimrc
+cp .gemrc               $HOME/.gemrc
 cp .git-completion.bash $HOME/.git-completion.bash
 
 test -d /Applications/Sublime\ Text\ 2.app/ && {
