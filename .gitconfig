@@ -22,8 +22,7 @@
   # lg is now a shortcut for a pretty log with short commit messages
   # See the log manpage: https://www.kernel.org/pub/software/scm/git/docs/git-log.html
   # for explanations of what these options do
-  lg = log \
-    --graph \
+  ll = log \
     --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
     --abbrev-commit \
     --date=relative
@@ -74,7 +73,10 @@
 
   # custom
   restart = !git checkout HEAD && git clean -df
-  switch = !git remote remove origin && git remote add origin
+  switch  = !git remote remove origin && git remote add origin
+  catchup =  pull --ff-only
+  wip     =  commit --all -m "WIP"
+  cm      =  commit -m
 
   [credential]
     helper = osxkeychain
