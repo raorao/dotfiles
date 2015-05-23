@@ -8,12 +8,15 @@ if ! [ -f ./.git-completion.bash ]; then
   curl --silent https://raw.githubusercontent.com/git/git/5c38a1fad748696108339c74f741e1a8a3ea79a2/contrib/completion/git-completion.bash -o ./.git-completion.bash
 fi
 
-# creates .gitconfig.temp
-touch ./.gitconfig.temp
-cat ./.gitconfig > ./.gitconfig.temp
+# adds user info to gitconfig
+cat ./.gitconfig       > ./.gitconfig.temp
 cat ./.gitconfig-user >> ./.gitconfig.temp
 
-cp .bash_profile        $HOME/.bash_profile
+# adds secrets to .bash_profile
+cat ./.bash_profile  > ./.bash_profile.temp
+cat ./.secrets      >> ./.bash_profile.temp
+
+cp .bash_profile.temp   $HOME/.bash_profile
 cp .gitconfig.temp      $HOME/.gitconfig
 cp .gitignore_global    $HOME/.gitignore_global
 cp .irbrc               $HOME/.irbrc

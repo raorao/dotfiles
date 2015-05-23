@@ -1,2 +1,3 @@
 .git-completion.bash
-.gitconfig.temp
+*.temp
+.secrets

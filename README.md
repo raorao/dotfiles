@@ -5,6 +5,8 @@ dotfiles
 
 +  update ./.gitconfig-user with your username and email.
 
++ [optional] add any secret keys in a file called ./.secrets. These will be loaded along with your bash profile.
+
 + install seil to handle keyboard mapping (https://pqrs.org/osx/karabiner/seil.html)
 
 ## Usage
