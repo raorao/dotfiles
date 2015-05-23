@@ -27,9 +27,6 @@ test -d /Applications/Sublime\ Text\ 2.app/ && {
   cp Prefrences.sublime-settings-user $HOME/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
 }
 
-test -d /Applications/Sublime\ Text.app && {
-  echo "Sublime Text 3 prefs auto install not currently supported."
-}
 
 git update-index --assume-unchanged ./.gitconfig-user
 
