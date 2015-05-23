@@ -78,5 +78,10 @@
   wip     =  commit --all -m "WIP"
   cm      =  commit -m
 
+  list-untracked = "!git ls-files -v | grep ^[sS] | cut -c '3-'"
+  untrack =  update-index --skip-worktree
+  retrack =  update-index --no-skip-worktree
+  retrack-all = "!git update-index --no-skip-worktree $(git list-untracked | tr '\n' ' ')"
+
   [credential]
     helper = osxkeychain
