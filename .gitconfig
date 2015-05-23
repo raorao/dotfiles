@@ -73,7 +73,7 @@
   scrap = checkout HEAD
 
   # custom
-  restart = !git checkout HEAD && git clean -f
+  restart = !git checkout HEAD && git clean -df
   switch = !git remote remove origin && git remote add origin
 
   [credential]
