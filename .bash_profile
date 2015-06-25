@@ -54,3 +54,4 @@ alias ls='ls -Gh'
 alias e=subl
 alias be="bundle exec"
 alias te="open -a TextEdit"
+alias jscs="jscs -c ~/.jscsrc"
