@@ -2,6 +2,20 @@
 
 set -e # Exit on any failure
 
+# saves current version of configuration files
+FILENAMES=( .bash_profile .gitconfig .gitignore_global .irbrc .rspec .inputrc .vimrc .gemrc .jscsrc .git-completion.bash )
+
+if ! [ -d ./original ]; then
+	mkdir ./original
+	for filename in "${FILENAMES[@]}"
+	do
+		if [ -f $HOME/$filename ]; then
+          cp $HOME/$filename ./original/$filename
+		else
+          touch ./original/$filename
+		fi
+	done
+fi
 
 # loads git completion script if necessary.
 if ! [ -f ./.git-completion.bash ]; then

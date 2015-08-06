@@ -1,0 +1,12 @@
+FILENAMES=( .bash_profile .gitconfig .gitignore_global .irbrc .rspec .inputrc .vimrc .gemrc .jscsrc .git-completion.bash )
+
+if [ -d ./original ]; then
+	for filename in "${FILENAMES[@]}"
+	do
+	  cp ./original/$filename $HOME/$filename
+	done
+fi
+
+rm -rf ./original
+
+echo 'uninstalled dotfiles'
