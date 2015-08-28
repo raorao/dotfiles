@@ -79,6 +79,10 @@
   wip     =  commit --all -m "WIP"
   cm      =  commit -m
 
+  # richard
+  st  = status
+  cob = checkout -b
+
   list-untracked = "!git ls-files -v | grep ^[sS] | cut -c '3-'"
   untrack =  update-index --skip-worktree
   retrack =  update-index --no-skip-worktree
