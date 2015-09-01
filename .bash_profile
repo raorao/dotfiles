@@ -1,6 +1,12 @@
 # Path for brew
 test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
+# support for chruby
+if [ -d /usr/local/opt/chruby ]; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+  source /usr/local/share/chruby/auto.sh
+fi
+
 # Path for RVM
 test -d $HOME/.rvm/bin && PATH=$PATH:$HOME/.rvm/bin
 
