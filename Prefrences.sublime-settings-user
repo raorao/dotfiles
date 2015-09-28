@@ -31,6 +31,9 @@
   [
     "data",
     ".zeus.sock",
+    "vendor",
+    "node_modules",
+    "elm-stuff",
     ".git",
     ".svn",
     ".hg",
@@ -39,7 +42,6 @@
     ".bundle",
     "bundle",
     ".rbx",
-    "script",
     "tmp",
     "log"
   ],
