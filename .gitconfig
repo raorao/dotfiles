@@ -10,6 +10,9 @@
 [push]
   default = simple
 
+[rebase]
+  autosquash = true
+
 [color "status"]
   untracked = white
   changed = cyan
@@ -88,6 +91,7 @@
   untrack =  update-index --skip-worktree
   retrack =  update-index --no-skip-worktree
   retrack-all = "!git update-index --no-skip-worktree $(git list-untracked | tr '\n' ' ')"
+  fixup = commit --fixup
 
   [credential]
     helper = osxkeychain
