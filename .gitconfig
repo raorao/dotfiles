@@ -83,6 +83,7 @@
   wip       = commit --all -m "WIP"
   cm        = commit -m
   current   = rev-parse --abbrev-ref HEAD
+  publish   = "!git push -u origin `git current`"
 
   # richard
   st  = status
