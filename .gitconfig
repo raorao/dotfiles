@@ -78,7 +78,7 @@
   restart   = !git checkout HEAD && git clean -df
   switch    = !git remote remove origin && git remote add origin
   cleanup   = !git branch | grep -v -e master -e staging -e production | xargs git branch -d
-  prune-all = remote prune origin
+  prune-all = fetch --prune --all
   catchup   = pull --ff-only
   wip       = !git add . && git commit -m "WIP"
   cm        = commit -m
