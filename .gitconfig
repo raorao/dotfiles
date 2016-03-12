@@ -72,10 +72,9 @@
   # git reset
   hard = reset --hard
   soft = reset --soft
-  scrap = checkout HEAD
 
   # custom
-  restart   = !git checkout HEAD && git clean -df
+  scrap     = !git checkout . && git clean -df
   switch    = !git remote remove origin && git remote add origin
   cleanup   = !git branch | grep -v -e master -e staging -e production | xargs git branch -d
   prune-all = fetch --prune --all
