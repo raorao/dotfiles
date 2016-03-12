@@ -80,7 +80,7 @@
   cleanup   = !git branch | grep -v -e master -e staging -e production | xargs git branch -d
   prune-all = remote prune origin
   catchup   = pull --ff-only
-  wip       = commit --all -m "WIP"
+  wip       = !git add . && git commit -m "WIP"
   cm        = commit -m
   current   = rev-parse --abbrev-ref HEAD
   publish   = "!git push -u origin `git current`"
