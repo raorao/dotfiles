@@ -35,6 +35,8 @@
     "node_modules",
     "elm-stuff",
     ".git",
+    "rcov",
+    "coverage",
     ".svn",
     ".hg",
     "CVS",
