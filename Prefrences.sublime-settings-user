@@ -25,6 +25,7 @@
     "*.class",
     "*.psd",
     "*.db",
+    "*.min.js",
     "*.pdf"
   ],
   "folder_exclude_patterns":
@@ -34,6 +35,7 @@
     "vendor",
     "node_modules",
     "elm-stuff",
+    "build",
     ".git",
     "rcov",
     "coverage",
@@ -65,7 +67,10 @@
   "shift_tab_unindent": true,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
-  "word_wrap": "true",
   "trim_trailing_white_space_on_save": true,
+  "vintageous_use_ctrl_keys": true,
+  "vintageous_ignorecase": false,
+  "vintageous_use_sys_clipboard": true,
+  "word_wrap": "true",
   "ensure_newline_at_eof_on_save": true
 }
