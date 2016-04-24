@@ -60,6 +60,7 @@ alias ls='ls -Gh'
 alias e=subl
 alias be="bundle exec"
 alias te="open -a TextEdit"
+alias note="open -a Simplenote"
 alias jscs="jscs -c ~/.jscsrc"
 alias g="git"
 alias gi="git"
