@@ -94,6 +94,7 @@
   retrack-all = "!git update-index --no-skip-worktree $(git list-untracked | tr '\n' ' ')"
   fixup = commit --fixup
   alias = "!git config --list | grep alias"
+  anp = !git add -N . && git add -p
 
   [credential]
     helper = osxkeychain
