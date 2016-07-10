@@ -26,7 +26,8 @@
     "*.psd",
     "*.db",
     "*.min.js",
-    "*.pdf"
+    "*.pdf",
+    "*.beam"
   ],
   "folder_exclude_patterns":
   [
@@ -47,7 +48,8 @@
     "bundle",
     ".rbx",
     "tmp",
-    "log"
+    "log",
+    "_build"
   ],
   "font_face": "Monaco",
   "font_size": 13.0,
