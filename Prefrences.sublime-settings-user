@@ -37,6 +37,7 @@
     "node_modules",
     "elm-stuff",
     "build",
+    "deps",
     ".git",
     "rcov",
     "coverage",
