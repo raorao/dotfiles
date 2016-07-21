@@ -15,3 +15,6 @@
 
 # .Trashes holds disk specific trash folders
 .Trashes
+
+# scratchpad files
+*.scratchpad

@@ -15,6 +15,7 @@
     "*.o",
     "*.a",
     "*.lib",
+    "*.scratchpad",
     "*.so",
     "*.dylib",
     "*.ncb",
