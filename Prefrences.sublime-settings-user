@@ -51,7 +51,8 @@
     ".rbx",
     "tmp",
     "log",
-    "_build"
+    "_build",
+    "doc"
   ],
   "font_face": "Monaco",
   "font_size": 13.0,
