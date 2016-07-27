@@ -83,6 +83,7 @@
   cm        = commit -m
   current   = rev-parse --abbrev-ref HEAD
   publish   = "!git push -u origin `git current`"
+  tap       = add -p # for typo protection
 
   # richard
   st  = status
