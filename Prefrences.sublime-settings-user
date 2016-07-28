@@ -77,5 +77,6 @@
   "vintageous_ignorecase": false,
   "vintageous_use_sys_clipboard": true,
   "word_wrap": "true",
-  "ensure_newline_at_eof_on_save": true
+  "ensure_newline_at_eof_on_save": true,
+  "rulers": [80]
 }
