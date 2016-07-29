@@ -52,6 +52,7 @@
     "tmp",
     "log",
     "_build",
+    ".yardoc",
     "doc"
   ],
   "font_face": "Monaco",
