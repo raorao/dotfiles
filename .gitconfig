@@ -84,6 +84,7 @@
   current   = rev-parse --abbrev-ref HEAD
   publish   = "!git push -u origin `git current`"
   tap       = add -p # for typo protection
+  force     = push --force-with-lease
 
   # richard
   st  = status
