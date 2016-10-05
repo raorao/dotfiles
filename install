@@ -40,6 +40,13 @@ cp .inputrc             $HOME/.inputrc
 cp .vimrc               $HOME/.vimrc
 cp .gemrc               $HOME/.gemrc
 cp .jscsrc              $HOME/.jscsrc
+
+if [ -d /usr/local/bin/scripts ]; then
+  rm -r /usr/local/bin/scripts
+fi
+
+cp -R ./scripts /usr/local/bin/scripts
+
 cp .git-completion.bash $HOME/.git-completion.bash
 
 test -d /Applications/Sublime\ Text.app/ && {

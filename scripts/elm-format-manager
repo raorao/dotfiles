@@ -1,0 +1,12 @@
+#!/bin/bash
+
+elm_version=${1:-'0.16'}
+elm_format_executable=/usr/local/bin/elm-format-$elm_version
+
+if [ ! -f $elm_format_executable ]; then
+  echo "error: could not find elm-format-${elm_version} executable"
+  exit 1
+fi
+
+ln -sf $elm_format_executable /usr/local/bin/elm-format
+echo "elm-format is now an alias for elm-format-${elm_version}"
