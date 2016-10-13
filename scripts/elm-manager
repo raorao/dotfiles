@@ -1,0 +1,34 @@
+#!/bin/bash
+
+elm_version=${1:-'0.16'}
+elm_executable_path=/usr/local/bin/elm-$elm_version/node_modules/.bin
+elm_format_executable=/usr/local/bin/elm-format-$elm_version
+
+if [ ! -d $elm_executable_path ]; then
+  echo "error: could not find elm ${elm_version} executables"
+  exit 1
+fi
+
+if [ ! -f $elm_format_executable ]; then
+  echo "error: could not find elm-format-${elm_version} executable"
+  exit 1
+fi
+
+ln -sf $elm_executable_path/elm /usr/local/bin/elm
+echo "elm is now an alias for elm-${elm_version}"
+
+ln -sf $elm_executable_path/elm-make /usr/local/bin/elm-make
+echo "elm-make is now an alias for elm-make-${elm_version}"
+
+ln -sf $elm_executable_path/elm-package /usr/local/bin/elm-package
+echo "elm-package is now an alias for elm-package-${elm_version}"
+
+ln -sf $elm_executable_path/elm-reactor /usr/local/bin/elm-reactor
+echo "elm-reactor is now an alias for elm-reactor-${elm_version}"
+
+ln -sf $elm_executable_path/elm-repl /usr/local/bin/elm-repl
+echo "elm-repl is now an alias for elm-repl-${elm_version}"
+
+ln -sf $elm_format_executable /usr/local/bin/elm-format
+echo "elm-format is now an alias for elm-format-${elm_version}"
+
