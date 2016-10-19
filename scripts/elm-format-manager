@@ -14,7 +14,7 @@ if [ ! -f $elm_format_executable ]; then
   exit 1
 fi
 
-elm_executables=( elm elm-make elm-package elm-reactor elm-repl)
+elm_executables=( elm elm-make elm-package elm-reactor elm-repl )
 
 for ex in "${elm_executables[@]}"
 do
