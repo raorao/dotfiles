@@ -16,7 +16,7 @@ test -d $HOME/.rvm/bin && PATH=$PATH:$HOME/.rvm/bin
 
 # this is a terrible hack
 # https://github.com/rails/rails/issues/26658
-ln -s /usr/local/opt/readline/lib/libreadline.7.0.dylib /usr/local/opt/readline/lib/libreadline.6.dylib
+ln -sf /usr/local/opt/readline/lib/libreadline.7.0.dylib /usr/local/opt/readline/lib/libreadline.6.dylib
 
 # A more colorful prompt
 # \[\e[0m\] resets the color to default color
