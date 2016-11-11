@@ -33,6 +33,7 @@
   [
     "data",
     ".zeus.sock",
+    "webpack",
     "vendor",
     "node_modules",
     "elm-stuff",
