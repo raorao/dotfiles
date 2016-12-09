@@ -76,7 +76,7 @@
   # custom
   scrap     = !git checkout . && git clean -df
   switch    = !git remote remove origin && git remote add origin
-  cleanup   = !git branch | grep -v -e master -e staging -e production | xargs git branch -d
+  cleanup   = !git branch | grep -v -e master | xargs git branch -d
   prune-all = fetch --prune --all
   catchup   = pull --ff-only
   wip       = !git add . && git commit -m "WIP"
