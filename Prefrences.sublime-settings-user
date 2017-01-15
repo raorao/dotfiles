@@ -27,11 +27,13 @@
     "*.db",
     "*.min.js",
     "*.pdf",
-    "*.beam"
+    "*.beam",
+    "erl_crash.dump"
   ],
   "folder_exclude_patterns":
   [
     "data",
+    "doc",
     ".zeus.sock",
     "webpack",
     "vendor",
