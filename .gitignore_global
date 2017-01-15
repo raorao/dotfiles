@@ -19,5 +19,7 @@
 # scratchpad files
 *.scratchpad
 
+scratchpad/
+
 # entr.sh files
 entr.sh
