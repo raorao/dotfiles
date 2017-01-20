@@ -1,6 +1,12 @@
 # Path for brew
 test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/bin/scripts:~/bin:$PATH"
 
+# Path for asdf
+if [ $HOME/.asdf/asdf.sh ]; then
+  . $HOME/.asdf/asdf.sh
+  . $HOME/.asdf/completions/asdf.bash
+fi
+
 # support for chruby
 if [ -d /usr/local/opt/chruby ]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
