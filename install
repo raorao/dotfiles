@@ -40,6 +40,7 @@ cp .inputrc             $HOME/.inputrc
 cp .vimrc               $HOME/.vimrc
 cp .gemrc               $HOME/.gemrc
 cp .jscsrc              $HOME/.jscsrc
+cp .asdfrc              $HOME/.asdfrc
 
 if [ -d /usr/local/bin/scripts ]; then
   rm -r /usr/local/bin/scripts
