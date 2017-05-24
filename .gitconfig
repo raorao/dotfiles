@@ -18,6 +18,11 @@
   changed = cyan
   added = yellow
 
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
+
 # Aliases are command shortcuts
 [alias]
   co = checkout
