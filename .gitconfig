@@ -100,6 +100,7 @@
   retrack =  update-index --no-skip-worktree
   retrack-all = "!git update-index --no-skip-worktree $(git list-untracked | tr '\n' ' ')"
   fixup = commit --fixup
+  squash = commit --squash
   alias = "!git config --list | grep alias"
   anp = !git add -N . && git add -p
 
