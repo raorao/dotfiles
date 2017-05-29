@@ -34,6 +34,7 @@
   [
     "data",
     "doc",
+    ".jetpack",
     ".zeus.sock",
     "webpack",
     "vendor",
