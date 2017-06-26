@@ -98,6 +98,9 @@
   squash = commit --squash
   alias = "!git config --list | grep alias"
   anp = !git add -N . && git add -p
+  save = commit --amend -CHEAD
+  words = diff --word-diff
+
 
   [credential]
     helper = osxkeychain
