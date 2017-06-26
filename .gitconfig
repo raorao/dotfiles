@@ -90,11 +90,6 @@
   publish   = "!git push -u origin `git current`"
   tap       = add -p # for typo protection
   force     = push --force-with-lease
-
-  # richard
-  st  = status
-  cob = checkout -b
-
   list-untracked = "!git ls-files -v | grep ^[sS] | cut -c '3-'"
   untrack =  update-index --skip-worktree
   retrack =  update-index --no-skip-worktree
