@@ -32,7 +32,7 @@
   ],
   "folder_exclude_patterns":
   [
-    "doc",
+    "priv/static",
     ".jetpack",
     ".zeus.sock",
     "webpack",
