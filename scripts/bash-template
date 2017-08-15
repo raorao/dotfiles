@@ -1,0 +1,101 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+# content when you pass --help
+#/ Usage:
+#/   bash-template --file some/great/file.sh
+#/   bash-template # creates script.sh
+#/
+#/ Description:
+#/   creates a template for a bash script.
+#/   based on https://dev.to/thiht/shell-scripts-matter
+#/
+#/ Options:
+#/   --help: Display this help message
+#/   --file: specific path for new script file.
+usage() { grep '^#/' "$0" | cut -c4- ; exit 0 ; }
+
+# logging setup.
+readonly LOG_FILE="/tmp/$(basename "$0").log"
+info()    { echo "[INFO]    $@" | tee -a "$LOG_FILE" >&2 ; }
+warning() { echo "[WARNING] $@" | tee -a "$LOG_FILE" >&2 ; }
+error()   { echo "[ERROR]   $@" | tee -a "$LOG_FILE" >&2 ; }
+fatal()   { echo "[FATAL]   $@" | tee -a "$LOG_FILE" >&2 ; exit 1 ; }
+
+
+# cleanup regardless of error.
+cleanup() {
+  :
+}
+
+trap cleanup EXIT
+
+filename="script.sh"
+
+while test $# -gt 0; do
+  case "$1" in
+    -h|--help)
+      usage
+      shift
+      ;;
+    -f|--file)
+      filename="$2"
+      shift
+      shift
+      ;;
+    *)
+      echo "unrecognized flag ${1}. see --help for available options."
+      exit 1
+      ;;
+  esac
+done
+
+set +e
+read -r -d '' template <<-'EOF'
+  #!/bin/bash
+  set -euo pipefail
+  IFS=$'\n\t'
+
+  # content when you pass --help
+  #/ Usage:
+  #/ Description:
+  #/ Examples:
+  #/ Options:
+  #/   --help: Display this help message
+  usage() { grep '^#/' "$0" | cut -c4- ; exit 0 ; }
+
+  # logging setup.
+  readonly LOG_FILE="/tmp/$(basename "$0").log"
+  info()    { echo "[INFO]    $@" | tee -a "$LOG_FILE" >&2 ; }
+  warning() { echo "[WARNING] $@" | tee -a "$LOG_FILE" >&2 ; }
+  error()   { echo "[ERROR]   $@" | tee -a "$LOG_FILE" >&2 ; }
+  fatal()   { echo "[FATAL]   $@" | tee -a "$LOG_FILE" >&2 ; exit 1 ; }
+
+
+  # cleanup regardless of error.
+  cleanup() {
+    :
+  }
+
+  trap cleanup EXIT
+
+  while test $# -gt 0; do
+    case "$1" in
+      -h|--help)
+        usage
+        shift
+        ;;
+      *)
+        echo "unrecognized flag ${1}. see --help for available options."
+        exit 1
+        ;;
+    esac
+  done
+EOF
+set -e
+
+echo "$template" | cut -c3- > $filename
+chmod +x $filename
+info "created executable ${filename}."
+
