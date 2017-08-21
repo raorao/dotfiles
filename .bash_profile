@@ -2,9 +2,8 @@
 test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/bin/scripts:~/bin:$PATH"
 
 # Path for asdf
-if [ $HOME/.asdf/asdf.sh ]; then
-  . $HOME/.asdf/asdf.sh
-  . $HOME/.asdf/completions/asdf.bash
+if [ -x "$(command -v asdf)" ]; then
+  source /usr/local/opt/asdf/asdf.sh
 fi
 
 # support for chruby
