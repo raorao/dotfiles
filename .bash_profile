@@ -18,11 +18,6 @@ test -d $HOME/.rvm/bin && PATH=$PATH:$HOME/.rvm/bin
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-
-# this is a terrible hack
-# https://github.com/rails/rails/issues/26658
-ln -sf /usr/local/opt/readline/lib/libreadline.7.0.dylib /usr/local/opt/readline/lib/libreadline.6.dylib
-
 # A more colorful prompt
 # \[\e[0m\] resets the color to default color
 c_reset='\[\e[0m\]'
