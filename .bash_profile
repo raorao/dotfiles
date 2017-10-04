@@ -12,6 +12,15 @@ if [ -d /usr/local/opt/chruby ]; then
   source /usr/local/share/chruby/auto.sh
 fi
 
+# stitch fix specific changes
+
+# Since postgres isn't the default version, the binaries don't get added
+# automatically to the path.
+if [[ $PATH != *"/usr/local/opt/postgresql@9.4/bin:"* ]]
+then
+  export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
+fi
+
 # Path for RVM
 test -d $HOME/.rvm/bin && PATH=$PATH:$HOME/.rvm/bin
 

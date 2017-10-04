@@ -23,3 +23,7 @@ scratchpad/
 
 # entr.sh files
 entr.sh
+
+
+# various scripts
+invoker-remove-all
