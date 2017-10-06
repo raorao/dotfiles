@@ -25,5 +25,5 @@ scratchpad/
 entr.sh
 
 
-# various scripts
-invoker-remove-all
+# project-specific scripts outside of version control
+bespoke/
