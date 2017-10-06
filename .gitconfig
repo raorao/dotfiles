@@ -100,6 +100,9 @@
   anp = !git add -N . && git add -p
   save = commit --amend -CHEAD
   words = diff --word-diff
+  stash-save = stash save
+  stash-show = "!f() { git stash show stash^{/$*} -p; }; f"
+  stash-apply = "!f() { git stash apply stash^{/$*}; }; f"
 
 
   [credential]
