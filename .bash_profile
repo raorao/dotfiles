@@ -49,7 +49,7 @@ git_prompt ()
     return 0
   fi
   # Grab working branch name
-  git_branch=$(Git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
+  git_branch=$(Git branch 2>/dev/null | sed -n '/^\*/s/^\* //p' | cut -c 1-20)
   # Clean or dirty branch
   if git diff --quiet 2>/dev/null >&2; then
     git_color="${c_git_clean}"
