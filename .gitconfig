@@ -105,5 +105,5 @@
   stash-apply = "!f() { git stash apply stash^{/$*}; }; f"
 
 
-  [credential]
-    helper = osxkeychain
+[credential]
+  helper = osxkeychain
