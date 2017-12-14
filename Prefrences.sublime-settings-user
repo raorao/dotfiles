@@ -28,6 +28,7 @@
     "*.min.js",
     "*.pdf",
     "*.beam",
+    ".byebug_history",
     "erl_crash.dump"
   ],
   "folder_exclude_patterns":
