@@ -103,6 +103,7 @@
   stash-save = stash save
   stash-show = "!f() { git stash show stash^{/$*} -p; }; f"
   stash-apply = "!f() { git stash apply stash^{/$*}; }; f"
+  diff-grep = "!f() { git log -S "$*" -p; }; f"
 
 
 [credential]
