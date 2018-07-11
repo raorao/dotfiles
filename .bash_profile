@@ -74,6 +74,8 @@ export LSCOLORS=HxGxFxdxCxFxFxaccxaeex
 # Force ls to use colors (G) and use humanized file sizes (h)
 alias ls='ls -Gh'
 
+export BUNDLER_EDITOR=subl
+
 # Useful aliases
 alias e=subl
 alias be="bundle exec"
