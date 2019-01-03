@@ -41,6 +41,7 @@ cp .vimrc               $HOME/.vimrc
 cp .gemrc               $HOME/.gemrc
 cp .jscsrc              $HOME/.jscsrc
 cp .asdfrc              $HOME/.asdfrc
+cp .psqlrc              $HOME/.psqlrc
 cp .ssh-config          $HOME/.ssh/config
 
 if [ -d /usr/local/bin/scripts ]; then
