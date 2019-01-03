@@ -28,8 +28,10 @@ echo >> ./.bash_profile.temp
 cat ./.gitconfig-user >> ./.gitconfig.temp
 
 # adds secrets to .bash_profile
-cat ./.bash_profile  > ./.bash_profile.temp
-test -f ./.secrets && echo >> ./.bash_profile.temp && cat ./.secrets >> ./.bash_profile.temp
+cat ./.secrets > ./.bash_profile.temp
+echo >> ./.bash_profile.temp
+cat ./.bash_profile >> ./.bash_profile.temp
+
 
 cp .bash_profile.temp   $HOME/.bash_profile
 cp .gitconfig.temp      $HOME/.gitconfig
