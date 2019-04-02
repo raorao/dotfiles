@@ -35,7 +35,6 @@
   [
     ".jetpack",
     ".zeus.sock",
-    "webpack",
     "vendor",
     "dist",
     "node_modules",
