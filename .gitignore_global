@@ -27,3 +27,6 @@ entr.sh
 
 # project-specific scripts outside of version control
 bespoke/
+
+# asdf support
+.tool-versions
