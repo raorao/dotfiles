@@ -76,6 +76,11 @@ alias ls='ls -Gh'
 
 export BUNDLER_EDITOR=subl
 
+# allow tabs to access each other's history
+HISTCONTROL=ignoredups:erasedups
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+shopt -s histappend
+
 # Useful aliases
 alias e=subl
 alias be="bundle exec"
