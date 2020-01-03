@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby -w
+
+require 'time'
+require 'optparse'
+
+to_utc = true
+timestamp = nil
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: convert-timestamp [options]"
+
+  opts.on("--to-utc", "Convert to UTC") do
+    to_utc = true
+  end
+
+  opts.on("--to-local", "Convert to local timestamp") do
+    to_utc = false
+  end
+
+  opts.on("-tTIMESTAMP", "timestamp to convert") do |t|
+    timestamp = t
+  end
+end.parse!
+
+unless timestamp
+  puts "please specify timestamp. see --help for usage instructions"
+  exit 1
+end
+
+if to_utc
+  puts "converted #{timestamp} to UTC"
+  puts Time.parse(timestamp).utc
+else
+  puts "converted #{timestamp} to local time"
+  puts Time.parse(timestamp).localtime
+end
