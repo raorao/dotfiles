@@ -59,10 +59,10 @@
   unstage = reset HEAD
 
   # commits and history
-  ci = commit --verbose
-  ca = commit --verbose --all
-  amend = commit --verbose --amend
-  n = commit --verbose --amend
+  ci = commit --verbose --no-verify
+  ca = commit --verbose --all --no-verify
+  amend = commit --verbose --amend --no-verify
+  n = commit --verbose --amend --no-verify
   k = cherry-pick
   re = rebase --interactive
   pop = reset --soft HEAD^
@@ -87,8 +87,7 @@
   cleanup   = !git branch | grep -v -e master | grep -v -e main | xargs git branch -d
   prune-all = fetch --prune --all
   catchup   = pull --ff-only
-  wip       = !git add . && git commit -m "WIP"
-  cm        = commit -m
+  wip       = !git add . && git commit -m "WIP" --no-verify
   current   = rev-parse --abbrev-ref HEAD
   publish   = "!git push -u origin `git current`"
   tap       = add -p # for typo protection
@@ -97,11 +96,11 @@
   untrack =  update-index --skip-worktree
   retrack =  update-index --no-skip-worktree
   retrack-all = "!git update-index --no-skip-worktree $(git list-untracked | tr '\n' ' ')"
-  fixup = commit --fixup
-  squash = commit --squash
+  fixup = commit --fixup --no-verify
+  squash = commit --squash --no-verify
   alias = "!git config --list | grep alias"
   anp = !git add -N . && git add -p
-  save = commit --amend -CHEAD
+  save = commit --amend -CHEAD --no-verify
   words = diff --word-diff
   stash-save = stash save
   stash-show = "!f() { git stash show stash^{/$*} -p; }; f"
