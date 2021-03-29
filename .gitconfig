@@ -96,11 +96,11 @@
   untrack =  update-index --skip-worktree
   retrack =  update-index --no-skip-worktree
   retrack-all = "!git update-index --no-skip-worktree $(git list-untracked | tr '\n' ' ')"
-  fixup = commit --fixup --no-verify
-  squash = commit --squash --no-verify
+  fixup = commit --no-verify --fixup
+  squash = commit --no-verify --squash
   alias = "!git config --list | grep alias"
   anp = !git add -N . && git add -p
-  save = commit --amend -CHEAD --no-verify
+  save = commit --no-verify --amend -CHEAD
   words = diff --word-diff
   stash-save = stash save
   stash-show = "!f() { git stash show stash^{/$*} -p; }; f"
